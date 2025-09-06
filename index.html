@@ -11,7 +11,7 @@
       name="description"
       content="তরুণ উদ্যমে শিক্ষার্থীবান্ধব পরিবর্তন — ত্বা-সীন আহমেদ, কার্যকরী সদস্য (Executive Member), Ballot 15."
     />
-    <meta name="theme-color" content="#2563EB" />
+    <meta name="theme-color" content="#8B2C1F" />
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,12 +26,12 @@
 
     <style>
       :root {
-        /* Youthful, energetic palette */
-        --brand-indigo: #4f46e5; /* Indigo-600 */
-        --brand-blue: #2563eb; /* Blue-600  */
-        --brand-teal: #06b6d4; /* Cyan-500  */
-        --brand-lime: #84cc16; /* Lime-500  */
-        --brand-pink: #f472b6; /* Pink-400  */
+        /* Deep warm palette */
+        --brand-indigo: #8b2c1f; /* deep terracotta */
+        --brand-blue: #c2410c;   /* burnt orange */
+        --brand-teal: #d97706;   /* golden amber */
+        --brand-lime: #65a30d;   /* warm olive */
+        --brand-pink: #db2777;   /* warm rose */
 
         --ink-700: #334155;
         --ink-600: #475569;
@@ -54,12 +54,12 @@
       .gradient-hero {
         background: radial-gradient(
             1200px 600px at -10% 0%,
-            rgba(132, 204, 22, 0.18),
+            rgba(101, 163, 13, 0.18),
             transparent 50%
           ),
           radial-gradient(
             1000px 600px at 110% 20%,
-            rgba(6, 182, 212, 0.22),
+            rgba(217, 119, 6, 0.22),
             transparent 55%
           ),
           linear-gradient(
@@ -130,16 +130,16 @@
         outline-offset: 2px;
       }
 
-      /* Contact section gradient & ripple */
+      /* Contact section */
       .contact-gradient {
         background: radial-gradient(
             700px 300px at 0% 0%,
-            rgba(132, 204, 22, 0.18),
+            rgba(101, 163, 13, 0.18),
             transparent 40%
           ),
           radial-gradient(
             700px 300px at 100% 20%,
-            rgba(6, 182, 212, 0.22),
+            rgba(217, 119, 6, 0.22),
             transparent 45%
           ),
           linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
@@ -177,7 +177,6 @@
         opacity: 0;
       }
 
-      /* Toast */
       .toast {
         position: fixed;
         left: 50%;
@@ -355,7 +354,7 @@
                     aria-hidden="true"
                   >
                     <path
-                      d="M10 4h4a2 2 0 012 2v2h4v12H4V8h4V6a2 2 0 012-2zm0 4h4V6h-4v2z"
+                      d="M10 4h4a2 2 0 0 1 2 2v2h4v12H4V8h4V6a2 2 0 0 1 2-2zm0 4h4V6h-4v2z"
                     />
                   </svg>
                   <span data-bn="কার্যকরী সদস্য" data-en="Executive Member"
@@ -467,7 +466,7 @@
         </div>
       </section>
 
-      <!-- MANIFESTO -->
+      <!-- MANIFESTO (no gradients inside SVG or icon backgrounds) -->
       <section id="manifesto" class="section-padding">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10">
@@ -475,7 +474,7 @@
               class="text-4xl md:text-5xl font-extrabold"
               style="color: var(--brand-blue)"
             >
-              <span data-bn="আমাদের ইশতেহার" data-en="My Manifesto"
+              <span data-bn="আমার ইশতেহার" data-en="My Manifesto"
                 >আমার ইশতেহার</span
               >
             </h2>
@@ -495,13 +494,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-indigo),
-                    var(--brand-teal)
-                  );
-                "
+                style="background: var(--brand-indigo)"
               >
                 <!-- Education / reform -->
                 <svg
@@ -510,9 +503,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2zM5 11.24V15c0 2.76 3.58 5 8 5s8-2.24 8-5v-3.76L13 14.86 5 11.24z"
-                  />
+                  <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 12.09V15c0 2.76 3.58 5 8 5s8-2.24 8-5v-2.91L13 15.86 5 12.09z" />
                 </svg>
               </div>
               <h3
@@ -533,13 +524,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-blue),
-                    var(--brand-lime)
-                  );
-                "
+                style="background: var(--brand-blue)"
               >
                 <!-- Security -->
                 <svg
@@ -548,9 +533,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M12 2.25 4.5 5.25v6.14c0 5.28 3.4 8.91 7.5 10.36 4.1-1.45 7.5-5.08 7.5-10.36V5.25L12 2.25zM11 13.59l-2.3-2.3-1.4 1.41L11 16.29l5.7-5.7-1.41-1.41L11 13.59z"
-                  />
+                  <path d="M12 2.25 4.5 5.25v6.14c0 5.28 3.4 8.91 7.5 10.36 4.1-1.45 7.5-5.08 7.5-10.36V5.25L12 2.25zM11 13.59l-2.3-2.3-1.4 1.41L11 16.29l5.7-5.7-1.41-1.41L11 13.59z" />
                 </svg>
               </div>
               <h3
@@ -571,13 +554,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-teal),
-                    var(--brand-pink)
-                  );
-                "
+                style="background: var(--brand-teal)"
               >
                 <!-- Health -->
                 <svg
@@ -607,13 +584,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-indigo),
-                    var(--brand-pink)
-                  );
-                "
+                style="background: var(--brand-indigo)"
               >
                 <!-- Transport -->
                 <svg
@@ -622,9 +593,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M16 1H8C4 1 2 3 2 7v8c0 2 1 3 2 3v2a1 1 0 0 0 2 0v-2h10v2a1 1 0 0 0 2 0v-2c1 0 2-1 2-3V7c0-4-2-6-6-6zM6 15a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 .001-4.001A2 2 0 0 1 18 15zM4 7h16v3H4V7z"
-                  />
+                  <path d="M16 2H8C4 2 2 4 2 8v8c0 2 1 3 2 3v2a1 1 0 0 0 2 0v-2h10v2a1 1 0 0 0 2 0v-2c1 0 2-1 2-3V8c0-4-2-6-6-6zM6 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 .001-4.001A2 2 0 0 1 18 16zM4 8h16v3H4V8z" />
                 </svg>
               </div>
               <h3
@@ -645,13 +614,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-blue),
-                    var(--brand-teal)
-                  );
-                "
+                style="background: var(--brand-blue)"
               >
                 <!-- No ragging -->
                 <svg
@@ -660,9 +623,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-8 10a8 8 0 0 1 12.9-6.4L5.6 16.9A7.97 7.97 0 0 1 4 12zm8 8a8 8 0 0 1-6.4-3.1L18.9 3.6A8 8 0 0 1 12 20z"
-                  />
+                  <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-8 10a8 8 0 0 1 12.9-6.4L5.6 16.9A7.97 7.97 0 0 1 4 12zm8 8a8 8 0 0 1-6.4-3.1L18.9 3.6A8 8 0 0 1 12 20z" />
                 </svg>
               </div>
               <h3
@@ -683,13 +644,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-lime),
-                    var(--brand-pink)
-                  );
-                "
+                style="background: var(--brand-lime)"
               >
                 <!-- Skill -->
                 <svg
@@ -698,9 +653,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M19.14 12.94a7.5 7.5 0 0 0 .05-.94 7.5 7.5 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.55 7.55 0 0 0-1.63-.95l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54c-.57.22-1.11.53-1.63.95l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.06.62-.06.94s.03.63.06.94L2.83 14.5a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.51.41 1.06.74 1.63.95l.36 2.54a.5.5 0 0 0 .5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54c.57-.22 1.11-.53 1.63-.95l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.56zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"
-                  />
+                  <path d="M19.14 12.94a7.5 7.5 0 0 0 .05-.94 7.5 7.5 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.55 7.55 0 0 0-1.63-.95l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54c-.57.22-1.11.53-1.63.95l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.06.62-.06.94s.03.63.06.94L2.83 14.5a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.51.41 1.06.74 1.63.95l.36 2.54a.5.5 0 0 0 .5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54c.57-.22 1.11-.53 1.63-.95l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.56zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z" />
                 </svg>
               </div>
               <h3
@@ -721,13 +674,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-pink),
-                    var(--brand-indigo)
-                  );
-                "
+                style="background: var(--brand-pink)"
               >
                 <!-- Entrepreneurship -->
                 <svg
@@ -736,9 +683,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M10 2h4a2 2 0 0 1 2 2v2h4v12H4V6h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z"
-                  />
+                  <path d="M10 2h4a2 2 0 0 1 2 2v2h4v12H4V6h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z" />
                 </svg>
               </div>
               <h3
@@ -759,13 +704,7 @@
             <div class="card p-7 card-hover">
               <div
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-lime),
-                    var(--brand-blue)
-                  );
-                "
+                style="background: var(--brand-blue)"
               >
                 <!-- Accountability -->
                 <svg
@@ -774,9 +713,7 @@
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M3 3h18v2H3zM5 7h6v2H5zM5 11h6v2H5zM5 15h6v2H5zM14.59 8.59 13.17 10l3 3 5-5-1.41-1.41L16.17 10l-1.58-1.41z"
-                  />
+                  <path d="M3 3h18v2H3zM5 7h6v2H5zM5 11h6v2H5zM5 15h6v2H5zM14.59 8.59 13.17 10l3 3 5-5-1.41-1.41L16.17 10l-1.58-1.41z" />
                 </svg>
               </div>
               <h3
@@ -1016,13 +953,7 @@
                 <button
                   type="submit"
                   class="w-full py-4 rounded-xl font-bold text-lg text-white hover:opacity-95 transition-all"
-                  style="
-                    background: linear-gradient(
-                      135deg,
-                      var(--brand-blue),
-                      var(--brand-teal)
-                    );
-                  "
+                  style="background: var(--brand-blue)"
                 >
                   <span data-bn="জমা দিন" data-en="Submit">জমা দিন</span>
                 </button>
@@ -1040,9 +971,7 @@
                 <div class="flex items-center gap-4">
                   <div
                     class="w-12 h-12 rounded-xl grid place-items-center"
-                    style="
-                      background: linear-gradient(135deg, #22c55e, #16a34a);
-                    "
+                    style="background: #22c55e"
                   >
                     <svg
                       class="w-7 h-7 text-white"
@@ -1073,11 +1002,9 @@
                 <div class="flex items-center gap-4">
                   <div
                     class="w-12 h-12 rounded-xl grid place-items-center"
-                    style="
-                      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-                    "
+                    style="background: #1877f2"
                   >
-                    <!-- Fixed Facebook SVG path -->
+                    <!-- Clean Facebook SVG -->
                     <svg
                       class="w-7 h-7 text-white"
                       viewBox="0 0 24 24"
@@ -1085,7 +1012,7 @@
                       aria-hidden="true"
                     >
                       <path
-                        d="M22 12A10 10 0 1 0 10.4 21.9v-6.9H7.8V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0 0 22 12z"
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .1 2 .1v2.2h-1.1c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
                       />
                     </svg>
                   </div>
@@ -1102,7 +1029,7 @@
         </div>
       </section>
 
-      <!-- CONTACT (Redesigned) -->
+      <!-- CONTACT -->
       <section id="contact" class="section-padding contact-gradient">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-8">
@@ -1132,10 +1059,7 @@
               rel="noopener"
               class="ripple glass p-5 rounded-2xl flex items-center gap-4 card-hover"
             >
-              <div
-                class="w-12 h-12 rounded-xl grid place-items-center"
-                style="background: linear-gradient(135deg, #22c55e, #16a34a)"
-              >
+              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background:#22c55e">
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -1168,10 +1092,7 @@
               rel="noopener"
               class="ripple glass p-5 rounded-2xl flex items-center gap-4 card-hover"
             >
-              <div
-                class="w-12 h-12 rounded-xl grid place-items-center"
-                style="background: linear-gradient(135deg, #3b82f6, #1d4ed8)"
-              >
+              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background:#1877f2">
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -1179,7 +1100,7 @@
                   aria-hidden="true"
                 >
                   <path
-                    d="M22 12A10 10 0 1 0 10.4 21.9v-6.9H7.8V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0 0 22 12z"
+                    d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .1 2 .1v2.2h-1.1c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
                   />
                 </svg>
               </div>
@@ -1202,16 +1123,7 @@
               id="callNow"
               class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
             >
-              <div
-                class="w-12 h-12 rounded-xl grid place-items-center"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-indigo),
-                    var(--brand-teal)
-                  );
-                "
-              >
+              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background: var(--brand-indigo)">
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -1240,16 +1152,7 @@
               id="shareBtn"
               class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
             >
-              <div
-                class="w-12 h-12 rounded-xl grid place-items-center"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    var(--brand-lime),
-                    var(--brand-pink)
-                  );
-                "
-              >
+              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background: var(--brand-lime)">
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -1328,18 +1231,14 @@
         document.body.setAttribute("data-lang", to);
         document.querySelectorAll("[data-bn],[data-en]").forEach((el) => {
           const txt = el.getAttribute(to === "bn" ? "data-bn" : "data-en");
-          if (txt !== null) {
-            el.innerText = txt;
-          }
+          if (txt !== null) el.innerText = txt;
         });
       }
       langToggle?.addEventListener("click", () => {
         const current = document.body.getAttribute("data-lang") || "bn";
         setLang(current === "bn" ? "en" : "bn");
         const label = langToggle.querySelector("span");
-        if (label) {
-          label.innerText = current === "bn" ? "BN" : "EN";
-        }
+        if (label) label.innerText = current === "bn" ? "BN" : "EN";
       });
 
       // Slider
