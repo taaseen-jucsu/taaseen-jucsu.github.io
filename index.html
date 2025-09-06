@@ -28,10 +28,10 @@
       :root {
         /* Deep warm palette */
         --brand-indigo: #8b2c1f; /* deep terracotta */
-        --brand-blue: #c2410c;   /* burnt orange */
-        --brand-teal: #d97706;   /* golden amber */
-        --brand-lime: #65a30d;   /* warm olive */
-        --brand-pink: #db2777;   /* warm rose */
+        --brand-blue: #c2410c; /* burnt orange */
+        --brand-teal: #d97706; /* golden amber */
+        --brand-lime: #65a30d; /* warm olive */
+        --brand-pink: #db2777; /* warm rose */
 
         --ink-700: #334155;
         --ink-600: #475569;
@@ -248,6 +248,13 @@
               >হোম</a
             >
             <a
+              href="#bio"
+              class="hover:text-[var(--brand-teal)] transition nav-link"
+              data-bn="প্রার্থীর কথা"
+              data-en="Biography"
+              >প্রার্থীর কথা</a
+            >
+            <a
               href="#manifesto"
               class="hover:text-[var(--brand-teal)] transition nav-link"
               >ইশতেহার</a
@@ -298,6 +305,13 @@
         <div class="px-3 pt-2 pb-3 space-y-1">
           <a href="#hero" class="block px-3 py-2 hover:text-[var(--brand-teal)]"
             >হোম</a
+          >
+          <a
+            href="#bio"
+            class="block px-3 py-2 hover:text-[var(--brand-teal)]"
+            data-bn="প্রার্থীর কথা"
+            data-en="Biography"
+            >প্রার্থীর কথা</a
           >
           <a
             href="#manifesto"
@@ -361,8 +375,6 @@
                     >কার্যকরী সদস্য</span
                   >
                 </span>
-
-                <!-- Ballot Number 15 -->
                 <span
                   class="inline-flex items-center gap-2 badge-soft px-4 py-2 rounded-full text-sm md:text-base text-white"
                 >
@@ -384,7 +396,7 @@
               </p>
             </div>
 
-            <!-- Slider (t1.jpg–t4.jpg) -->
+            <!-- Slider -->
             <div class="order-1 lg:order-2">
               <div
                 class="slider w-full max-w-xl mx-auto aspect-[1/1] md:aspect-[4/3] bg-white/10 rounded-2xl shadow-2xl border-4 border-white/20"
@@ -456,8 +468,8 @@
                   class="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-2"
                 >
                   <span class="dot active" aria-hidden="true"></span
-                  ><span class="dot" aria-hidden="true"></span
-                  ><span class="dot" aria-hidden="true"></span
+                  ><span class="dot" aria-hidden="true"></span>
+                  <span class="dot" aria-hidden="true"></span
                   ><span class="dot" aria-hidden="true"></span>
                 </div>
               </div>
@@ -466,7 +478,7 @@
         </div>
       </section>
 
-      <!-- MANIFESTO (no gradients inside SVG or icon backgrounds) -->
+      <!-- MANIFESTO (icons: solid fills, no gradients) -->
       <section id="manifesto" class="section-padding">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10">
@@ -496,14 +508,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-indigo)"
               >
-                <!-- Education / reform -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 12.09V15c0 2.76 3.58 5 8 5s8-2.24 8-5v-2.91L13 15.86 5 12.09z" />
+                  <path
+                    d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 12.09V15c0 2.76 3.58 5 8 5s8-2.24 8-5v-2.91L13 15.86 5 12.09z"
+                  />
                 </svg>
               </div>
               <h3
@@ -526,14 +539,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-blue)"
               >
-                <!-- Security -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M12 2.25 4.5 5.25v6.14c0 5.28 3.4 8.91 7.5 10.36 4.1-1.45 7.5-5.08 7.5-10.36V5.25L12 2.25zM11 13.59l-2.3-2.3-1.4 1.41L11 16.29l5.7-5.7-1.41-1.41L11 13.59z" />
+                  <path
+                    d="M12 2.25 4.5 5.25v6.14c0 5.28 3.4 8.91 7.5 10.36 4.1-1.45 7.5-5.08 7.5-10.36V5.25L12 2.25zM11 13.59l-2.3-2.3-1.4 1.41L11 16.29l5.7-5.7-1.41-1.41L11 13.59z"
+                  />
                 </svg>
               </div>
               <h3
@@ -556,7 +570,6 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-teal)"
               >
-                <!-- Health -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -586,14 +599,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-indigo)"
               >
-                <!-- Transport -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M16 2H8C4 2 2 4 2 8v8c0 2 1 3 2 3v2a1 1 0 0 0 2 0v-2h10v2a1 1 0 0 0 2 0v-2c1 0 2-1 2-3V8c0-4-2-6-6-6zM6 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 .001-4.001A2 2 0 0 1 18 16zM4 8h16v3H4V8z" />
+                  <path
+                    d="M16 2H8C4 2 2 4 2 8v8c0 2 1 3 2 3v2a1 1 0 0 0 2 0v-2h10v2a1 1 0 0 0 2 0v-2c1 0 2-1 2-3V8c0-4-2-6-6-6zM6 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 .001-4.001A2 2 0 0 1 18 16zM4 8h16v3H4V8z"
+                  />
                 </svg>
               </div>
               <h3
@@ -616,14 +630,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-blue)"
               >
-                <!-- No ragging -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-8 10a8 8 0 0 1 12.9-6.4L5.6 16.9A7.97 7.97 0 0 1 4 12zm8 8a8 8 0 0 1-6.4-3.1L18.9 3.6A8 8 0 0 1 12 20z" />
+                  <path
+                    d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-8 10a8 8 0 0 1 12.9-6.4L5.6 16.9A7.97 7.97 0 0 1 4 12zm8 8a8 8 0 0 1-6.4-3.1L18.9 3.6A8 8 0 0 1 12 20z"
+                  />
                 </svg>
               </div>
               <h3
@@ -646,14 +661,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-lime)"
               >
-                <!-- Skill -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M19.14 12.94a7.5 7.5 0 0 0 .05-.94 7.5 7.5 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.55 7.55 0 0 0-1.63-.95l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54c-.57.22-1.11.53-1.63.95l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.06.62-.06.94s.03.63.06.94L2.83 14.5a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.51.41 1.06.74 1.63.95l.36 2.54a.5.5 0 0 0 .5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54c.57-.22 1.11-.53 1.63-.95l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.56zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z" />
+                  <path
+                    d="M19.14 12.94a7.5 7.5 0 0 0 .05-.94 7.5 7.5 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.55 7.55 0 0 0-1.63-.95l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54c-.57.22-1.11.53-1.63.95l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.06.62-.06.94s.03.63.06.94L2.83 14.5a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.51.41 1.06.74 1.63.95l.36 2.54a.5.5 0 0 0 .5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54c.57-.22 1.11-.53 1.63-.95l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.56zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"
+                  />
                 </svg>
               </div>
               <h3
@@ -676,14 +692,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-pink)"
               >
-                <!-- Entrepreneurship -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M10 2h4a2 2 0 0 1 2 2v2h4v12H4V6h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z" />
+                  <path
+                    d="M10 2h4a2 2 0 0 1 2 2v2h4v12H4V6h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z"
+                  />
                 </svg>
               </div>
               <h3
@@ -706,14 +723,15 @@
                 class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
                 style="background: var(--brand-blue)"
               >
-                <!-- Accountability -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
                 >
-                  <path d="M3 3h18v2H3zM5 7h6v2H5zM5 11h6v2H5zM5 15h6v2H5zM14.59 8.59 13.17 10l3 3 5-5-1.41-1.41L16.17 10l-1.58-1.41z" />
+                  <path
+                    d="M3 3h18v2H3zM5 7h6v2H5zM5 11h6v2H5zM5 15h6v2H5zM14.59 8.59 13.17 10l3 3 5-5-1.41-1.41L16.17 10l-1.58-1.41z"
+                  />
                 </svg>
               </div>
               <h3
@@ -733,6 +751,72 @@
         </div>
       </section>
 
+      <!-- BIOGRAPHY -->
+      <section id="bio" class="section-padding">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8">
+            <h2
+              class="text-3xl md:text-4xl font-extrabold"
+              style="color: var(--brand-indigo)"
+            >
+              <span data-bn="প্রার্থীর কথা" data-en="Words from the Candidate"
+                >প্রার্থীর কথা</span
+              >
+            </h2>
+            <p
+              class="text-slate-600 mt-2"
+              data-bn="আমার পথচলা, চেতনা ও দায়বদ্ধতার গল্প"
+              data-en="My journey, values and commitment"
+            >
+              আমার পথচলা, চেতনা ও দায়বদ্ধতার গল্প
+            </p>
+          </div>
+
+          <article class="card p-6 md:p-8 leading-8 text-slate-700">
+            <div class="flex items-start gap-4">
+              <div class="space-y-5">
+                <p>
+                  আমি ত্বা-সীন আহমেদ, জাহাঙ্গীরনগর বিশ্ববিদ্যালয়ের ম্যানেজমেন্ট
+                  স্টাডিজ বিভাগের শিক্ষার্থী। ঢাকাতেই বেড়ে উঠা আমার শৈশব থেকে
+                  সংবাদপত্র পড়ার অভ্যাস গড়ে ওঠে, যা দেশের ও বিশ্বের নানা
+                  রাজনৈতিক, সামাজিক ও অর্থনৈতিক বিষয়ে সচেতন করে তোলে। সেই
+                  সচেতনতা থেকেই নবম শ্রেণিতে ২০১৮ সালের নিরাপদ সড়ক আন্দোলনে
+                  অংশগ্রহণ করি। এরপর ২০২২ সালে কলেজ জীবনে একই দাবিতে আবারও
+                  রাস্তায় নামি। আন্দোলনে অংশ নেওয়ার কারণে কলেজ কর্তৃপক্ষের
+                  শাস্তির মুখোমুখি হলেও প্রিফেক্ট এবং গণিত ক্লাবের যুগ্ম সাধারণ
+                  সম্পাদক হিসেবে আমার সুনামের কারণে সে সংকট থেকে রক্ষা পাই।
+                </p>
+                <p>
+                  শৈশবের স্বপ্ন ছিল সেনাবাহিনীতে যোগ দিয়ে দেশ সেবার। আইএসএসবি
+                  উত্তীর্ণ হলেও ব্যক্তিগত কারণে বিএমএ-তে যোগ দেওয়া সম্ভব হয়নি।
+                  তবে দেশপ্রেম ও ন্যায়ের দায়বদ্ধতা থেকেই বিশ্ববিদ্যালয়ে এসে
+                  বিভিন্ন আন্দোলনে যুক্ত হই। বিশেষ করে ২০২৪ সালের জুলাই বিপ্লবে
+                  বৈষম্যবিরোধী ছাত্র আন্দোলনের শুরু থেকে সক্রিয় ছিলাম। ১৫ ও ১৭
+                  জুলাই ক্যাম্পাসে হামলার অভিজ্ঞতার পর ভ্যাকেন্ট দেওয়া হলে
+                  মিরপুরে থেকে আন্দোলনে যুক্ত হই এবং শেষ দিন পর্যন্ত ফ্যাসিবাদের
+                  বিরুদ্ধে কণ্ঠ উঁচু রাখি।
+                </p>
+                <p>
+                  ৫ আগস্টের পরও আমি আন্দোলনে সক্রিয় থাকি। ক্যাম্পাসে হামলাকারী
+                  শিক্ষক ও শিক্ষার্থীদের বিচার, অটোমেশন, পোষ্যকোটা এবং জাকসুর
+                  তফসিল নিয়ে প্রশাসনের গড়িমসি বিরোধী আন্দোলনে অংশগ্রহণ করি।
+                </p>
+                <p>
+                  এতদিন আমি আন্দোলন করেছি শিক্ষার্থীদের অধিকার ও স্বার্থ রক্ষার
+                  জন্য। এতদিন সিস্টেমের বাইরে থেকে প্রতিবাদ করেছি এখন আমি মনে
+                  করি, শুধু সিস্টেমের বাইরে থেকে প্রতিবাদ করাই যথেষ্ট
+                  নয়—সিস্টেমের ভেতরে থেকেও পরিবর্তন আনার প্রয়োজন আছে। তাই
+                  জাকসুতে আসতে চাই, যেন শিক্ষার্থীদের ন্যায্য দাবি ও অধিকারকে
+                  আরও কার্যকরভাবে প্রতিষ্ঠা করা যায়। আমার নৈতিকতা, সচেতনতা ও
+                  দায়িত্ববোধ থেকেই এই পদক্ষেপ। তাই আমি আসন্ন জাকসু নির্বাচনের
+                  কেন্দ্রীয় শিক্ষার্থী সংসদ এর কার্যকরী সদস্য পদে দাড়াচ্ছি।
+                  আপনারা দোয়া করবেন।
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
       <!-- VOLUNTEER (WhatsApp submit to +8801721271478) -->
       <section id="volunteer" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -749,8 +833,9 @@
               <span
                 data-bn="ফর্ম সাবমিট করলে তথ্য WhatsApp-এ যাবে"
                 data-en="Submitting the form will open WhatsApp with your details"
-                >ফর্ম সাবমিট করুন</span
               >
+                ফর্ম সাবমিট করুন
+              </span>
             </p>
           </div>
 
@@ -759,11 +844,11 @@
             <div class="lg:col-span-2 card p-6">
               <form id="volunteer-form" class="space-y-6" novalidate>
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-2"
-                    ><span data-bn="পূর্ণ নাম *" data-en="Full Name *"
+                  <label class="block text-sm font-medium text-slate-700 mb-2">
+                    <span data-bn="পূর্ণ নাম *" data-en="Full Name *"
                       >পূর্ণ নাম *</span
-                    ></label
-                  >
+                    >
+                  </label>
                   <input
                     id="f-name"
                     type="text"
@@ -773,11 +858,11 @@
                 </div>
                 <div class="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-2"
-                      ><span data-bn="ইমেইল *" data-en="Email *"
-                        >ইমেইল *</span
-                      ></label
+                    <label
+                      class="block text-sm font-medium text-slate-700 mb-2"
                     >
+                      <span data-bn="ইমেইল *" data-en="Email *">ইমেইল *</span>
+                    </label>
                     <input
                       id="f-email"
                       type="email"
@@ -786,11 +871,13 @@
                     />
                   </div>
                   <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-2"
-                      ><span data-bn="ফোন নম্বর *" data-en="Phone Number *"
-                        >ফোন নম্বর *</span
-                      ></label
+                    <label
+                      class="block text-sm font-medium text-slate-700 mb-2"
                     >
+                      <span data-bn="ফোন নম্বর *" data-en="Phone Number *"
+                        >ফোন নম্বর *</span
+                      >
+                    </label>
                     <input
                       id="f-phone"
                       type="tel"
@@ -801,11 +888,11 @@
                 </div>
 
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-2"
-                    ><span data-bn="বিভাগ *" data-en="Department *"
+                  <label class="block text-sm font-medium text-slate-700 mb-2">
+                    <span data-bn="বিভাগ *" data-en="Department *"
                       >বিভাগ *</span
-                    ></label
-                  >
+                    >
+                  </label>
                   <select
                     id="f-dept"
                     required
@@ -877,76 +964,81 @@
                 </div>
 
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-2"
-                    ><span
+                  <label class="block text-sm font-medium text-slate-700 mb-2">
+                    <span
                       data-bn="আগ্রহের ক্ষেত্র (একাধিক নির্বাচন করুন)"
                       data-en="Areas of Interest (Select multiple)"
-                      >আগ্রহের ক্ষেত্র (একাধিক নির্বাচন করুন)</span
-                    ></label
-                  >
+                    >
+                      আগ্রহের ক্ষেত্র (একাধিক নির্বাচন করুন)
+                    </span>
+                  </label>
                   <div class="grid sm:grid-cols-2 gap-3">
-                    <label class="flex items-center p-3 chip rounded-lg"
-                      ><input
+                    <label class="flex items-center p-3 chip rounded-lg">
+                      <input
                         type="checkbox"
                         value="Blood Donation"
                         class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
-                      /><span
+                      />
+                      <span
                         data-bn="রক্তদান কার্যক্রম"
                         data-en="Blood Donation Programs"
                         >রক্তদান কার্যক্রম</span
-                      ></label
-                    >
-                    <label class="flex items-center p-3 chip rounded-lg"
-                      ><input
+                      >
+                    </label>
+                    <label class="flex items-center p-3 chip rounded-lg">
+                      <input
                         type="checkbox"
                         value="Educational Support"
                         class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
-                      /><span
+                      />
+                      <span
                         data-bn="শিক্ষা সহায়তা"
                         data-en="Educational Support"
                         >শিক্ষা সহায়তা</span
-                      ></label
-                    >
-                    <label class="flex items-center p-3 chip rounded-lg"
-                      ><input
+                      >
+                    </label>
+                    <label class="flex items-center p-3 chip rounded-lg">
+                      <input
                         type="checkbox"
                         value="Environment"
                         class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
-                      /><span
+                      />
+                      <span
                         data-bn="পরিবেশ সংরক্ষণ"
                         data-en="Environmental Conservation"
                         >পরিবেশ সংরক্ষণ</span
-                      ></label
-                    >
-                    <label class="flex items-center p-3 chip rounded-lg"
-                      ><input
+                      >
+                    </label>
+                    <label class="flex items-center p-3 chip rounded-lg">
+                      <input
                         type="checkbox"
                         value="Health"
                         class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
-                      /><span data-bn="স্বাস্থ্য সেবা" data-en="Health Services"
+                      />
+                      <span data-bn="স্বাস্থ্য সেবা" data-en="Health Services"
                         >স্বাস্থ্য সেবা</span
-                      ></label
-                    >
-                    <label class="flex items-center p-3 chip rounded-lg"
-                      ><input
+                      >
+                    </label>
+                    <label class="flex items-center p-3 chip rounded-lg">
+                      <input
                         type="checkbox"
                         value="Transport"
                         class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
-                      /><span data-bn="পরিবহন" data-en="Transport"
-                        >পরিবহন</span
-                      ></label
-                    >
-                    <label class="flex items-center p-3 chip rounded-lg"
-                      ><input
+                      />
+                      <span data-bn="পরিবহন" data-en="Transport">পরিবহন</span>
+                    </label>
+                    <label class="flex items-center p-3 chip rounded-lg">
+                      <input
                         type="checkbox"
                         value="Volunteering"
                         class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
-                      /><span
+                      />
+                      <span
                         data-bn="স্বেচ্ছাসেবক কার্যক্রম"
                         data-en="Volunteering"
                         >স্বেচ্ছাসেবক কার্যক্রম</span
-                      ></label
-                    >
+                      >
+                    </label>
                   </div>
                 </div>
 
@@ -1004,7 +1096,6 @@
                     class="w-12 h-12 rounded-xl grid place-items-center"
                     style="background: #1877f2"
                   >
-                    <!-- Clean Facebook SVG -->
                     <svg
                       class="w-7 h-7 text-white"
                       viewBox="0 0 24 24"
@@ -1012,7 +1103,7 @@
                       aria-hidden="true"
                     >
                       <path
-                        d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .1 2 .1v2.2h-1.1c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .1 2 .1v2.2h-1.1c-1.2 0-1.6.7-1.6 1.5V12হ2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
                       />
                     </svg>
                   </div>
@@ -1025,162 +1116,6 @@
                 </div>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section-padding contact-gradient">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-8">
-            <h2
-              class="text-3xl md:text-4xl font-extrabold"
-              style="color: var(--brand-blue)"
-            >
-              <span data-bn="যোগাযোগে থাকুন" data-en="Stay Connected"
-                >যোগাযোগে থাকুন</span
-              >
-            </h2>
-            <p class="mt-2 text-slate-600">
-              <span
-                data-bn="এক ক্লিকে সংযোগ • শেয়ার • কল"
-                data-en="One-tap connect • share • call"
-              >
-                এক ক্লিকে সংযোগ • শেয়ার • কল
-              </span>
-            </p>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <!-- WhatsApp CTA -->
-            <a
-              href="https://wa.me/8801721271478"
-              target="_blank"
-              rel="noopener"
-              class="ripple glass p-5 rounded-2xl flex items-center gap-4 card-hover"
-            >
-              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background:#22c55e">
-                <svg
-                  class="w-7 h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20 3.5A10.5 10.5 0 0 0 3.1 17.6L2 22l4.5-1.2A10.4 10.4 0 0 0 12 21a10.5 10.5 0 0 0 8-17.5zM12 19.5a8.4 8.4 0 0 1-4.3-1.2l-.3-.2-2.6.7.7-2.5-.2-.3A8.5 8.5 0 1 1 12 19.5zm4.8-5.2c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a7.7 7.7 0 0 1-2.3-1.4 8.4 8.4 0 0 1-1.5-2.3c-.1-.3 0-.5.1-.7s.6-.7.8-1 .2-.4.1-.6-.5-1.4-.8-2-.6-.5-.8-.5h-.6c-.2 0-.6.1-.9.4a3 3 0 0 0-1 2.2 5.5 5.5 0 0 0 1.2 2.9 12.5 12.5 0 0 0 4.7 4 5 5 0 0 0 2.9.9 3 3 0 0 0 2.1-1c.3-.4.4-.8.5-1s0-.6-.2-.7z"
-                  />
-                </svg>
-              </div>
-              <div class="min-w-0">
-                <div
-                  class="font-bold text-slate-900"
-                  data-bn="WhatsApp-এ কথা বলুন"
-                  data-en="Chat on WhatsApp"
-                >
-                  WhatsApp-এ কথা বলুন
-                </div>
-                <div class="text-slate-600 text-sm truncate">
-                  +8801721271478
-                </div>
-              </div>
-            </a>
-
-            <!-- Facebook CTA -->
-            <a
-              href="https://www.facebook.com/taa.seen.ahmed.992836"
-              target="_blank"
-              rel="noopener"
-              class="ripple glass p-5 rounded-2xl flex items-center gap-4 card-hover"
-            >
-              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background:#1877f2">
-                <svg
-                  class="w-7 h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .1 2 .1v2.2h-1.1c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
-                  />
-                </svg>
-              </div>
-              <div class="min-w-0">
-                <div
-                  class="font-bold text-slate-900"
-                  data-bn="Facebook-এ মেসেজ করুন"
-                  data-en="Message on Facebook"
-                >
-                  Facebook-এ মেসেজ করুন
-                </div>
-                <div class="text-slate-600 text-sm truncate">
-                  /taa.seen.ahmed.992836
-                </div>
-              </div>
-            </a>
-
-            <!-- Call Now -->
-            <button
-              id="callNow"
-              class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
-            >
-              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background: var(--brand-indigo)">
-                <svg
-                  class="w-7 h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M6.62 10.79a15 15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11 11 0 0 0 3.45.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.45 1 1 0 0 1-.24 1.05z"
-                  />
-                </svg>
-              </div>
-              <div class="text-left">
-                <div
-                  class="font-bold text-slate-900"
-                  data-bn="এখনই কল করুন"
-                  data-en="Call Now"
-                >
-                  এখনই কল করুন
-                </div>
-                <div class="text-slate-600 text-sm">+8801721271478</div>
-              </div>
-            </button>
-
-            <!-- Share Card -->
-            <button
-              id="shareBtn"
-              class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
-            >
-              <div class="w-12 h-12 rounded-xl grid place-items-center" style="background: var(--brand-lime)">
-                <svg
-                  class="w-7 h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.27 3.27 0 0 0 0-1.39l7.02-4.11A2.99 2.99 0 1 0 14 5a2.9 2.9 0 0 0 .04.49L7.02 9.6a3 3 0 1 0 0 4.8l7 4.11c-.03.16-.05.32-.05.49a3 3 0 1 0 3-2.92z"
-                  />
-                </svg>
-              </div>
-              <div class="text-left">
-                <div
-                  class="font-bold text-slate-900"
-                  data-bn="এই ক্যাম্পেইন শেয়ার করুন"
-                  data-en="Share this campaign"
-                >
-                  এই ক্যাম্পেইন শেয়ার করুন
-                </div>
-                <div
-                  class="text-slate-600 text-sm"
-                  data-bn="বন্ধুদের জানাতে শেয়ার বাটনে ট্যাপ করুন"
-                  data-en="Tap to share with friends"
-                >
-                  বন্ধুদের জানাতে শেয়ার বাটনে ট্যাপ করুন
-                </div>
-              </div>
-            </button>
           </div>
         </div>
       </section>
@@ -1199,8 +1134,8 @@
           >
         </div>
         <div class="flex items-center gap-4 text-sm">
-          <span
-            >Developed & Designed by
+          <span>
+            Developed & Designed by
             <a
               href="https://about.me/shahriar"
               target="_blank"
@@ -1208,8 +1143,8 @@
               class="font-semibold"
               style="color: var(--brand-teal)"
               >Mahir Shahriar</a
-            ></span
-          >
+            >
+          </span>
         </div>
       </div>
     </footer>
