@@ -275,12 +275,14 @@
             <button
               id="mobile-menu-btn"
               class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+              aria-label="Toggle Menu"
             >
               <svg
                 class="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -350,6 +352,7 @@
                     class="w-5 h-5 mr-2"
                     viewBox="0 0 24 24"
                     fill="currentColor"
+                    aria-hidden="true"
                   >
                     <path
                       d="M10 4h4a2 2 0 012 2v2h4v12H4V8h4V6a2 2 0 012-2zm0 4h4V6h-4v2z"
@@ -394,7 +397,7 @@
                     decoding="async"
                     class="object-cover w-full h-full"
                     src="./t1.jpg"
-                    alt="Taa-Seen Ahmed — 1"
+                    alt="Taa-Seen Ahmed — Photo 1"
                 /></picture>
                 <picture class="slide"
                   ><img
@@ -402,7 +405,7 @@
                     decoding="async"
                     class="object-cover w-full h-full"
                     src="./t2.jpg"
-                    alt="Taa-Seen Ahmed — 2"
+                    alt="Taa-Seen Ahmed — Photo 2"
                 /></picture>
                 <picture class="slide"
                   ><img
@@ -410,7 +413,7 @@
                     decoding="async"
                     class="object-cover w-full h-full"
                     src="./t3.jpg"
-                    alt="Taa-Seen Ahmed — 3"
+                    alt="Taa-Seen Ahmed — Photo 3"
                 /></picture>
                 <picture class="slide"
                   ><img
@@ -418,22 +421,34 @@
                     decoding="async"
                     class="object-cover w-full h-full"
                     src="./t4.jpg"
-                    alt="Taa-Seen Ahmed — 4"
+                    alt="Taa-Seen Ahmed — Photo 4"
                 /></picture>
 
                 <button
                   id="prevSlide"
                   class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/35 hover:bg-black/50 text-white p-2 rounded-full"
+                  aria-label="Previous slide"
                 >
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
                     <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
                   </svg>
                 </button>
                 <button
                   id="nextSlide"
                   class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/35 hover:bg-black/50 text-white p-2 rounded-full"
+                  aria-label="Next slide"
                 >
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
                     <path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z" />
                   </svg>
                 </button>
@@ -441,8 +456,10 @@
                 <div
                   class="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-2"
                 >
-                  <span class="dot active"></span><span class="dot"></span
-                  ><span class="dot"></span><span class="dot"></span>
+                  <span class="dot active" aria-hidden="true"></span
+                  ><span class="dot" aria-hidden="true"></span
+                  ><span class="dot" aria-hidden="true"></span
+                  ><span class="dot" aria-hidden="true"></span>
                 </div>
               </div>
             </div>
@@ -458,8 +475,8 @@
               class="text-4xl md:text-5xl font-extrabold"
               style="color: var(--brand-blue)"
             >
-              <span data-bn="আমাদের ইশতেহার" data-en="Our Manifesto"
-                >আমাদের ইশতেহার</span
+              <span data-bn="আমাদের ইশতেহার" data-en="My Manifesto"
+                >আমার ইশতেহার</span
               >
             </h2>
             <p class="mt-2 text-slate-700">
@@ -486,6 +503,7 @@
                   );
                 "
               >
+                <!-- Education / reform -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -523,6 +541,7 @@
                   );
                 "
               >
+                <!-- Security -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -560,6 +579,7 @@
                   );
                 "
               >
+                <!-- Health -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -595,6 +615,7 @@
                   );
                 "
               >
+                <!-- Transport -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -632,6 +653,7 @@
                   );
                 "
               >
+                <!-- No ragging -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -669,6 +691,7 @@
                   );
                 "
               >
+                <!-- Skill -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -706,6 +729,7 @@
                   );
                 "
               >
+                <!-- Entrepreneurship -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -743,6 +767,7 @@
                   );
                 "
               >
+                <!-- Accountability -->
                 <svg
                   class="w-7 h-7 text-white"
                   viewBox="0 0 24 24"
@@ -787,7 +812,7 @@
               <span
                 data-bn="ফর্ম সাবমিট করলে তথ্য WhatsApp-এ যাবে"
                 data-en="Submitting the form will open WhatsApp with your details"
-                >ফর্ম সাবমিট করলে তথ্য WhatsApp-এ যাবে</span
+                >ফর্ম সাবমিট করুন</span
               >
             </p>
           </div>
@@ -795,7 +820,7 @@
           <div class="grid lg:grid-cols-3 gap-8">
             <!-- Form -->
             <div class="lg:col-span-2 card p-6">
-              <form id="volunteer-form" class="space-y-6">
+              <form id="volunteer-form" class="space-y-6" novalidate>
                 <div>
                   <label class="block text-sm font-medium text-slate-700 mb-2"
                     ><span data-bn="পূর্ণ নাম *" data-en="Full Name *"
@@ -999,11 +1024,7 @@
                     );
                   "
                 >
-                  <span
-                    data-bn="জমা দিন (WhatsApp খুলবে)"
-                    data-en="Submit (Opens WhatsApp)"
-                    >জমা দিন (WhatsApp খুলবে)</span
-                  >
+                  <span data-bn="জমা দিন" data-en="Submit">জমা দিন</span>
                 </button>
               </form>
             </div>
@@ -1056,6 +1077,7 @@
                       background: linear-gradient(135deg, #3b82f6, #1d4ed8);
                     "
                   >
+                    <!-- Fixed Facebook SVG path -->
                     <svg
                       class="w-7 h-7 text-white"
                       viewBox="0 0 24 24"
@@ -1063,7 +1085,7 @@
                       aria-hidden="true"
                     >
                       <path
-                        d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8ল-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                        d="M22 12A10 10 0 1 0 10.4 21.9v-6.9H7.8V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0 0 22 12z"
                       />
                     </svg>
                   </div>
@@ -1157,7 +1179,7 @@
                   aria-hidden="true"
                 >
                   <path
-                    d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                    d="M22 12A10 10 0 1 0 10.4 21.9v-6.9H7.8V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0 0 22 12z"
                   />
                 </svg>
               </div>
@@ -1256,38 +1278,6 @@
                 </div>
               </div>
             </button>
-
-            <!-- Copy Number -->
-            <button
-              id="copyBtn"
-              class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
-            >
-              <div
-                class="w-12 h-12 rounded-xl grid place-items-center"
-                style="background: linear-gradient(135deg, #0ea5e9, #2563eb)"
-              >
-                <svg
-                  class="w-7 h-7 text-white"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
-                  />
-                </svg>
-              </div>
-              <div class="text-left">
-                <div
-                  class="font-bold text-slate-900"
-                  data-bn="নম্বর কপি করুন"
-                  data-en="Copy Number"
-                >
-                  নম্বর কপি করুন
-                </div>
-                <div class="text-slate-600 text-sm">+8801721271478</div>
-              </div>
-            </button>
           </div>
         </div>
       </section>
@@ -1322,7 +1312,7 @@
     </footer>
 
     <!-- Toast -->
-    <div id="toast" class="toast">Copied!</div>
+    <div id="toast" class="toast" role="status" aria-live="polite">Copied!</div>
 
     <script>
       // Mobile menu
@@ -1346,10 +1336,10 @@
       langToggle?.addEventListener("click", () => {
         const current = document.body.getAttribute("data-lang") || "bn";
         setLang(current === "bn" ? "en" : "bn");
-        langToggle.querySelector("span")?.setAttribute("data-bn", "EN");
-        langToggle.querySelector("span")?.setAttribute("data-en", "BN");
-        langToggle.querySelector("span").innerText =
-          current === "bn" ? "BN" : "EN";
+        const label = langToggle.querySelector("span");
+        if (label) {
+          label.innerText = current === "bn" ? "BN" : "EN";
+        }
       });
 
       // Slider
@@ -1424,6 +1414,12 @@
       });
 
       // Share
+      const toast = document.getElementById("toast");
+      function showToast(text) {
+        toast.textContent = text;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1600);
+      }
       document
         .getElementById("shareBtn")
         ?.addEventListener("click", async () => {
@@ -1437,31 +1433,14 @@
               await navigator.share(shareData);
             } catch (e) {}
           } else {
-            await navigator.clipboard.writeText(window.location.href);
-            showToast("Link copied!");
+            try {
+              await navigator.clipboard.writeText(window.location.href);
+              showToast("Link copied!");
+            } catch (e) {
+              showToast("Copy failed");
+            }
           }
         });
-
-      // Copy number
-      const phoneText = "+8801721271478";
-      document
-        .getElementById("copyBtn")
-        ?.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(phoneText);
-            showToast("Number copied!");
-          } catch (e) {
-            showToast("Copy failed");
-          }
-        });
-
-      // Toast helper
-      const toast = document.getElementById("toast");
-      function showToast(text) {
-        toast.textContent = text;
-        toast.classList.add("show");
-        setTimeout(() => toast.classList.remove("show"), 1600);
-      }
 
       // Initial language (BN default)
       setLang("bn");
