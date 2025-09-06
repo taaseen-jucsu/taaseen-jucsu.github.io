@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>ত্বা-সীন আহমেদ (Taa-Seen Ahmed) — কার্যকরী সদস্য | Ballot 15</title>
+    <meta
+      name="description"
+      content="তরুণ উদ্যমে শিক্ষার্থীবান্ধব পরিবর্তন — ত্বা-সীন আহমেদ, কার্যকরী সদস্য (Executive Member), Ballot 15."
+    />
+    <meta name="theme-color" content="#2563EB" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts: Bengali (Hind Siliguri), English (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Youthful, energetic palette */
+        --brand-indigo: #4f46e5; /* Indigo-600 */
+        --brand-blue: #2563eb; /* Blue-600  */
+        --brand-teal: #06b6d4; /* Cyan-500  */
+        --brand-lime: #84cc16; /* Lime-500  */
+        --brand-pink: #f472b6; /* Pink-400  */
+
+        --ink-700: #334155;
+        --ink-600: #475569;
+        --bg: #f7fafc;
+      }
+      .font-bn {
+        font-family: "Hind Siliguri", system-ui, -apple-system, Segoe UI, Roboto,
+          Arial, "Noto Sans Bengali", sans-serif;
+      }
+      .font-en {
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+      }
+      body {
+        font-family: "Hind Siliguri", "Inter", sans-serif;
+        background: var(--bg);
+        scroll-behavior: smooth;
+      }
+
+      .gradient-hero {
+        background: radial-gradient(
+            1200px 600px at -10% 0%,
+            rgba(132, 204, 22, 0.18),
+            transparent 50%
+          ),
+          radial-gradient(
+            1000px 600px at 110% 20%,
+            rgba(6, 182, 212, 0.22),
+            transparent 55%
+          ),
+          linear-gradient(
+            135deg,
+            var(--brand-indigo) 0%,
+            var(--brand-blue) 50%,
+            var(--brand-teal) 100%
+          );
+      }
+      .badge-soft {
+        background: linear-gradient(135deg, #ffffffaa, #ffffff44);
+        border: 1px solid #ffffff55;
+        backdrop-filter: blur(8px);
+      }
+      .chip {
+        background: linear-gradient(135deg, #ffffff, #f3f4f6);
+        border: 1px solid #e5e7eb;
+      }
+      .card {
+        background: linear-gradient(135deg, #fff, #f8fafc);
+        border: 1px solid #e5e7eb;
+        border-radius: 1.25rem;
+      }
+      .card-hover {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 45px -15px rgba(0, 0, 0, 0.25);
+      }
+
+      .section-padding {
+        padding: 4.5rem 0;
+      }
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 3rem 0;
+        }
+      }
+
+      /* Slider */
+      .slider {
+        position: relative;
+        border-radius: 1.25rem;
+        overflow: hidden;
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+      .slide.active {
+        opacity: 1;
+      }
+      .dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 9999px;
+        background: #e5e7eb;
+      }
+      .dot.active {
+        background: var(--brand-lime);
+      }
+
+      .focus-visible:focus {
+        outline: 3px solid var(--brand-pink);
+        outline-offset: 2px;
+      }
+
+      /* Contact section gradient & ripple */
+      .contact-gradient {
+        background: radial-gradient(
+            700px 300px at 0% 0%,
+            rgba(132, 204, 22, 0.18),
+            transparent 40%
+          ),
+          radial-gradient(
+            700px 300px at 100% 20%,
+            rgba(6, 182, 212, 0.22),
+            transparent 45%
+          ),
+          linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      }
+      .glass {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.4)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(14px);
+      }
+      .ripple {
+        position: relative;
+        overflow: hidden;
+      }
+      .ripple::after {
+        content: "";
+        position: absolute;
+        border-radius: 9999px;
+        transform: scale(0);
+        opacity: 0.35;
+        background: #fff;
+        width: 8rem;
+        height: 8rem;
+        pointer-events: none;
+        transition: transform 0.45s ease, opacity 0.6s ease;
+        top: var(--y, 50%);
+        left: var(--x, 50%);
+        translate: -50% -50%;
+      }
+      .ripple.active::after {
+        transform: scale(1);
+        opacity: 0;
+      }
+
+      /* Toast */
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: 1.25rem;
+        transform: translateX(-50%);
+        background: #111827;
+        color: #fff;
+        padding: 0.65rem 1rem;
+        border-radius: 0.75rem;
+        font-size: 0.95rem;
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+        z-index: 60;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-4px);
+      }
+    </style>
+
+    <!-- Social Preview -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Taa-Seen Ahmed — Executive Member | Ballot 15"
+    />
+    <meta
+      property="og:description"
+      content="Young, energetic, student-first."
+    />
+    <meta property="og:image" content="./t1.jpg" />
+    <meta property="og:site_name" content="Ballot 15" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Taa-Seen Ahmed — Executive Member | Ballot 15"
+    />
+    <meta
+      name="twitter:description"
+      content="Young, energetic, student-first."
+    />
+    <meta name="twitter:image" content="./t1.jpg" />
+  </head>
+
+  <body class="font-bn text-slate-800" data-lang="bn">
+    <!-- NAV -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-md fixed w-full top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-16 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div
+              class="text-xl md:text-2xl font-extrabold"
+              style="color: var(--brand-blue)"
+            >
+              <span data-bn="ত্বা-সীন আহমেদ" data-en="Taa-Seen Ahmed"
+                >ত্বা-সীন আহমেদ</span
+              >
+            </div>
+            <span class="hidden sm:inline text-sm text-slate-600"
+              >Ballot 15</span
+            >
+          </div>
+          <div class="hidden md:flex items-center gap-6">
+            <a
+              href="#hero"
+              class="hover:text-[var(--brand-teal)] transition nav-link"
+              >হোম</a
+            >
+            <a
+              href="#manifesto"
+              class="hover:text-[var(--brand-teal)] transition nav-link"
+              >ইশতেহার</a
+            >
+            <a
+              href="#volunteer"
+              class="hover:text-[var(--brand-teal)] transition nav-link"
+              >স্বেচ্ছাসেবক</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-[var(--brand-teal)] transition nav-link"
+              >যোগাযোগ</a
+            >
+          </div>
+          <div class="flex items-center gap-2">
+            <button
+              id="lang-toggle"
+              class="px-3 py-1 text-white rounded-lg text-sm font-medium"
+              style="background: var(--brand-teal)"
+            >
+              <span data-bn="EN" data-en="BN">EN</span>
+            </button>
+            <button
+              id="mobile-menu-btn"
+              class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-3 pt-2 pb-3 space-y-1">
+          <a href="#hero" class="block px-3 py-2 hover:text-[var(--brand-teal)]"
+            >হোম</a
+          >
+          <a
+            href="#manifesto"
+            class="block px-3 py-2 hover:text-[var(--brand-teal)]"
+            >ইশতেহার</a
+          >
+          <a
+            href="#volunteer"
+            class="block px-3 py-2 hover:text-[var(--brand-teal)]"
+            >স্বেচ্ছাসেবক</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 hover:text-[var(--brand-teal)]"
+            >যোগাযোগ</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main id="main">
+      <!-- HERO -->
+      <section
+        id="hero"
+        class="gradient-hero text-white pt-20 relative overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+          <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <!-- Copy -->
+            <div class="order-2 lg:order-1">
+              <h1
+                class="text-4xl md:text-6xl font-extrabold leading-tight text-center md:text-left"
+              >
+                <span data-bn="ত্বা-সীন আহমেদ" data-en="Taa-Seen Ahmed"
+                  >ত্বা-সীন আহমেদ</span
+                >
+              </h1>
+              <p
+                class="text-lg md:text-xl mt-2 opacity-95 font-en text-center md:text-left"
+              >
+                Taa-Seen Ahmed
+              </p>
+
+              <div
+                class="mt-3 flex items-center gap-3 justify-center md:justify-start flex-wrap"
+              >
+                <span
+                  class="inline-flex items-center badge-soft px-4 py-2 rounded-full text-sm md:text-base text-white"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10 4h4a2 2 0 012 2v2h4v12H4V8h4V6a2 2 0 012-2zm0 4h4V6h-4v2z"
+                    />
+                  </svg>
+                  <span data-bn="কার্যকরী সদস্য" data-en="Executive Member"
+                    >কার্যকরী সদস্য</span
+                  >
+                </span>
+
+                <!-- Ballot Number 15 -->
+                <span
+                  class="inline-flex items-center gap-2 badge-soft px-4 py-2 rounded-full text-sm md:text-base text-white"
+                >
+                  <span data-bn="ব্যালট নম্বর ১৫" data-en="Ballot Number 15"
+                    >ব্যালট নম্বর ১৫</span
+                  >
+                </span>
+              </div>
+
+              <p
+                class="mt-5 text-xl md:text-2xl font-semibold text-lime-200 leading-snug text-center md:text-left"
+              >
+                <span
+                  data-bn="তরুণ উদ্যম • শিক্ষার্থীবান্ধব পরিবর্তন"
+                  data-en="Young energy • Student-first reform"
+                >
+                  তরুণ উদ্যম • শিক্ষার্থীবান্ধব পরিবর্তন
+                </span>
+              </p>
+            </div>
+
+            <!-- Slider (t1.jpg–t4.jpg) -->
+            <div class="order-1 lg:order-2">
+              <div
+                class="slider w-full max-w-xl mx-auto aspect-[1/1] md:aspect-[4/3] bg-white/10 rounded-2xl shadow-2xl border-4 border-white/20"
+              >
+                <picture class="slide active"
+                  ><img
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="object-cover w-full h-full"
+                    src="./t1.jpg"
+                    alt="Taa-Seen Ahmed — 1"
+                /></picture>
+                <picture class="slide"
+                  ><img
+                    loading="lazy"
+                    decoding="async"
+                    class="object-cover w-full h-full"
+                    src="./t2.jpg"
+                    alt="Taa-Seen Ahmed — 2"
+                /></picture>
+                <picture class="slide"
+                  ><img
+                    loading="lazy"
+                    decoding="async"
+                    class="object-cover w-full h-full"
+                    src="./t3.jpg"
+                    alt="Taa-Seen Ahmed — 3"
+                /></picture>
+                <picture class="slide"
+                  ><img
+                    loading="lazy"
+                    decoding="async"
+                    class="object-cover w-full h-full"
+                    src="./t4.jpg"
+                    alt="Taa-Seen Ahmed — 4"
+                /></picture>
+
+                <button
+                  id="prevSlide"
+                  class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/35 hover:bg-black/50 text-white p-2 rounded-full"
+                >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                  </svg>
+                </button>
+                <button
+                  id="nextSlide"
+                  class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/35 hover:bg-black/50 text-white p-2 rounded-full"
+                >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                  </svg>
+                </button>
+
+                <div
+                  class="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-2"
+                >
+                  <span class="dot active"></span><span class="dot"></span
+                  ><span class="dot"></span><span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MANIFESTO -->
+      <section id="manifesto" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-extrabold"
+              style="color: var(--brand-blue)"
+            >
+              <span data-bn="আমাদের ইশতেহার" data-en="Our Manifesto"
+                >আমাদের ইশতেহার</span
+              >
+            </h2>
+            <p class="mt-2 text-slate-700">
+              <span
+                data-bn="তরুণ নেতৃত্ব, কার্যকর পরিবর্তন—শিক্ষার্থীদের কল্যাণে ৮টি প্রতিশ্রুতি"
+                data-en="Young leadership, real change — 8 pledges for students"
+              >
+                তরুণ নেতৃত্ব, কার্যকর পরিবর্তন—শিক্ষার্থীদের কল্যাণে ৮টি
+                প্রতিশ্রুতি
+              </span>
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-indigo),
+                    var(--brand-teal)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2zM5 11.24V15c0 2.76 3.58 5 8 5s8-2.24 8-5v-3.76L13 14.86 5 11.24z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="একাডেমিক সংস্কার"
+                data-en="Academic Reform"
+              >
+                একাডেমিক সংস্কার
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="শিক্ষার্থী-বান্ধব রুটিন, শিক্ষকদের কার্যক্রম মনিটরিং, আন্তর্জাতিক মানের সিলেবাস, ও মাস্টারপ্ল্যানে পর্যাপ্ত একাডেমিক ভবন অন্তর্ভুক্তি।"
+                data-en="Student-friendly routines, faculty activity monitoring, international-standard syllabi, and adequate academic buildings in the masterplan."
+              ></p>
+            </div>
+
+            <!-- 2 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-blue),
+                    var(--brand-lime)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2.25 4.5 5.25v6.14c0 5.28 3.4 8.91 7.5 10.36 4.1-1.45 7.5-5.08 7.5-10.36V5.25L12 2.25zM11 13.59l-2.3-2.3-1.4 1.41L11 16.29l5.7-5.7-1.41-1.41L11 13.59z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="ক্যাম্পাসে নিরাপত্তা বৃদ্ধি"
+                data-en="Stronger Campus Security"
+              >
+                ক্যাম্পাসে নিরাপত্তা বৃদ্ধি
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="বহিরাগত প্রবেশ সীমিতকরণ, হলে নিরাপত্তা জোরদার, ও ৯৯৯-এর আদলে ২৪/৭ ক্যাম্পাস জরুরি হটলাইন।"
+                data-en="Limit outsider access, strengthen hall security, and launch a 24/7 campus emergency hotline modeled on 999."
+              ></p>
+            </div>
+
+            <!-- 3 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-teal),
+                    var(--brand-pink)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M10 2h4v6h6v4h-6v6h-4v-6H4V8h6z" />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="স্বাস্থ্য ও মেডিক্যাল খাতে সংস্কার"
+                data-en="Health & Medical Reform"
+              >
+                স্বাস্থ্য ও মেডিক্যাল খাতে সংস্কার
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="হল-একাডেমিক ভবন-টিএসসি- ক্যাফেটেরিয়ায় উন্নত স্যানিটেশন; নারীদের জন্য ভেন্ডিং মেশিন; মেডিকেলে ডাক্তার/টেস্ট/ওষুধ/এন্টিভেনম মজুদ বৃদ্ধি।"
+                data-en="Improved sanitation across halls/academics/TSC/cafeterias; sanitary napkin vending machines; more doctors, lab tests, medicines, antibiotics & antivenom stocks."
+              ></p>
+            </div>
+
+            <!-- 4 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-indigo),
+                    var(--brand-pink)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 1H8C4 1 2 3 2 7v8c0 2 1 3 2 3v2a1 1 0 0 0 2 0v-2h10v2a1 1 0 0 0 2 0v-2c1 0 2-1 2-3V7c0-4-2-6-6-6zM6 15a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 .001-4.001A2 2 0 0 1 18 15zM4 7h16v3H4V7z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="অভ্যন্তরীণ পরিবহন সংস্কার"
+                data-en="Improve Internal Transport"
+              >
+                অভ্যন্তরীণ পরিবহন সংস্কার
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="কার্যকর, সময়োপযোগী ও নিরাপদ বাস সার্ভিসের সম্প্রসারণ ও আধুনিকায়ন।"
+                data-en="Expand and modernize an efficient, timely, and safe campus bus service."
+              ></p>
+            </div>
+
+            <!-- 5 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-blue),
+                    var(--brand-teal)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-8 10a8 8 0 0 1 12.9-6.4L5.6 16.9A7.97 7.97 0 0 1 4 12zm8 8a8 8 0 0 1-6.4-3.1L18.9 3.6A8 8 0 0 1 12 20z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="গণরুম/গেস্টরুম/র‌্যাগিং বন্ধ"
+                data-en="End Ragging & Toxic Practices"
+              >
+                গণরুম/গেস্টরুম/র‌্যাগিং বন্ধ
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="গণরুম, গেস্টরুম, র‌্যাগিংসহ অসুস্থ সংস্কৃতি চিরতরে বন্ধে জিরো-টলারেন্স।"
+                data-en="Zero-tolerance to ragging, ‘gan-room’, ‘guest-room’ and other toxic practices."
+              ></p>
+            </div>
+
+            <!-- 6 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-lime),
+                    var(--brand-pink)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M19.14 12.94a7.5 7.5 0 0 0 .05-.94 7.5 7.5 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.55 7.55 0 0 0-1.63-.95l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54c-.57.22-1.11.53-1.63.95l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.06.62-.06.94s.03.63.06.94L2.83 14.5a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.51.41 1.06.74 1.63.95l.36 2.54a.5.5 0 0 0 .5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54c.57-.22 1.11-.53 1.63-.95l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.56zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="দক্ষতা উন্নয়ন"
+                data-en="Skill Development"
+              >
+                দক্ষতা উন্নয়ন
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="ওয়ার্কশপ, সফট-স্কিল, আইসিটি ট্রেনিং ও পাবলিক স্পিকিং আয়োজন করে দক্ষতা বৃদ্ধি।"
+                data-en="Workshops on soft skills, ICT, and public speaking to build employable skills."
+              ></p>
+            </div>
+
+            <!-- 7 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-pink),
+                    var(--brand-indigo)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 2h4a2 2 0 0 1 2 2v2h4v12H4V6h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="পার্ট-টাইম কাজ ও উদ্যোক্তা সহায়তা"
+                data-en="Part-Time Jobs & Entrepreneurship"
+              >
+                পার্ট-টাইম কাজ ও উদ্যোক্তা সহায়তা
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="অন-ক্যাম্পাস পার্ট-টাইম কাজের সুযোগ বৃদ্ধি, উদ্যোক্তা হতে উৎসাহ ও সুযোগ সম্প্রসারণ।"
+                data-en="Increase on-campus part-time jobs and expand opportunities to become entrepreneurs."
+              ></p>
+            </div>
+
+            <!-- 8 -->
+            <div class="card p-7 card-hover">
+              <div
+                class="w-14 h-14 rounded-xl grid place-items-center mb-4 mx-auto"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-lime),
+                    var(--brand-blue)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3h18v2H3zM5 7h6v2H5zM5 11h6v2H5zM5 15h6v2H5zM14.59 8.59 13.17 10l3 3 5-5-1.41-1.41L16.17 10l-1.58-1.41z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-lg text-slate-900 text-center"
+                data-bn="জাকসু পরিষদের জবাবদিহি"
+                data-en="Accountability for All Office-Bearers"
+              >
+                জাকসু পরিষদের জবাবদিহি
+              </h3>
+              <p
+                class="mt-2 text-slate-600 text-center"
+                data-bn="নির্বাচিত প্রত্যেকের ইশতেহার বাস্তবায়ন হচ্ছে কিনা তা নিশ্চিত করতে স্বচ্ছ মনিটরিং।"
+                data-en="Transparent monitoring to ensure every elected office-bearer delivers their manifesto."
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VOLUNTEER (WhatsApp submit to +8801721271478) -->
+      <section id="volunteer" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-extrabold"
+              style="color: var(--brand-indigo)"
+            >
+              <span data-bn="স্বেচ্ছাসেবক হোন" data-en="Become a Volunteer"
+                >স্বেচ্ছাসেবক হোন</span
+              >
+            </h2>
+            <p class="mt-2 text-slate-600">
+              <span
+                data-bn="ফর্ম সাবমিট করলে তথ্য WhatsApp-এ যাবে"
+                data-en="Submitting the form will open WhatsApp with your details"
+                >ফর্ম সাবমিট করলে তথ্য WhatsApp-এ যাবে</span
+              >
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Form -->
+            <div class="lg:col-span-2 card p-6">
+              <form id="volunteer-form" class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-2"
+                    ><span data-bn="পূর্ণ নাম *" data-en="Full Name *"
+                      >পূর্ণ নাম *</span
+                    ></label
+                  >
+                  <input
+                    id="f-name"
+                    type="text"
+                    required
+                    class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--brand-teal)] focus:border-transparent transition-all"
+                  />
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2"
+                      ><span data-bn="ইমেইল *" data-en="Email *"
+                        >ইমেইল *</span
+                      ></label
+                    >
+                    <input
+                      id="f-email"
+                      type="email"
+                      required
+                      class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--brand-teal)] focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2"
+                      ><span data-bn="ফোন নম্বর *" data-en="Phone Number *"
+                        >ফোন নম্বর *</span
+                      ></label
+                    >
+                    <input
+                      id="f-phone"
+                      type="tel"
+                      required
+                      class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--brand-teal)] focus:border-transparent transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-2"
+                    ><span data-bn="বিভাগ *" data-en="Department *"
+                      >বিভাগ *</span
+                    ></label
+                  >
+                  <select
+                    id="f-dept"
+                    required
+                    class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--brand-teal)] focus:border-transparent transition-all"
+                  >
+                    <option value="" selected>Select Department</option>
+
+                    <!-- Science & Engineering -->
+                    <option>Department of Chemistry</option>
+                    <option>
+                      Department of Computer Science and Engineering
+                    </option>
+                    <option>Department of Environmental Sciences</option>
+                    <option>Department of Geological Sciences</option>
+                    <option>Department of Mathematics</option>
+                    <option>Department of Physics</option>
+                    <option>Department of Statistics and Data Science</option>
+
+                    <!-- Social Sciences -->
+                    <option>Department of Anthropology</option>
+                    <option>Department of Economics</option>
+                    <option>Department of Geography and Environment</option>
+                    <option>Department of Government and Politics</option>
+                    <option>Department of Public Administration</option>
+                    <option>Department of Urban and Regional Planning</option>
+
+                    <!-- Arts & Humanities -->
+                    <option>Department of Archaeology</option>
+                    <option>Department of Bangla</option>
+                    <option>Department of English</option>
+                    <option>Department of Drama and Dramatics</option>
+                    <option>Department of Fine Arts</option>
+                    <option>Department of History</option>
+                    <option>Department of International Relations</option>
+                    <option>Department of Journalism and Media Studies</option>
+                    <option>Department of Philosophy</option>
+
+                    <!-- Biological Sciences & Health -->
+                    <option>Department of Botany</option>
+                    <option>
+                      Department of Biochemistry and Molecular Biology
+                    </option>
+                    <option>
+                      Department of Biotechnology and Genetic Engineering
+                    </option>
+                    <option>Department of Microbiology</option>
+                    <option>Department of Pharmacy</option>
+                    <option>Department of Public Health and Informatics</option>
+                    <option>Department of Zoology</option>
+
+                    <!-- Business Studies -->
+                    <option>
+                      Department of Accounting and Information Systems
+                    </option>
+                    <option>Department of Finance and Banking</option>
+                    <option>Department of Marketing</option>
+                    <option>Department of Management Studies</option>
+
+                    <!-- Law -->
+                    <option>Department of Law and Justice</option>
+
+                    <!-- Institutes -->
+                    <option>Institute of Business Administration</option>
+                    <option>Institute of Information Technology</option>
+                    <option>
+                      Institute of Comparative Literature and Culture
+                    </option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 mb-2"
+                    ><span
+                      data-bn="আগ্রহের ক্ষেত্র (একাধিক নির্বাচন করুন)"
+                      data-en="Areas of Interest (Select multiple)"
+                      >আগ্রহের ক্ষেত্র (একাধিক নির্বাচন করুন)</span
+                    ></label
+                  >
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <label class="flex items-center p-3 chip rounded-lg"
+                      ><input
+                        type="checkbox"
+                        value="Blood Donation"
+                        class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
+                      /><span
+                        data-bn="রক্তদান কার্যক্রম"
+                        data-en="Blood Donation Programs"
+                        >রক্তদান কার্যক্রম</span
+                      ></label
+                    >
+                    <label class="flex items-center p-3 chip rounded-lg"
+                      ><input
+                        type="checkbox"
+                        value="Educational Support"
+                        class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
+                      /><span
+                        data-bn="শিক্ষা সহায়তা"
+                        data-en="Educational Support"
+                        >শিক্ষা সহায়তা</span
+                      ></label
+                    >
+                    <label class="flex items-center p-3 chip rounded-lg"
+                      ><input
+                        type="checkbox"
+                        value="Environment"
+                        class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
+                      /><span
+                        data-bn="পরিবেশ সংরক্ষণ"
+                        data-en="Environmental Conservation"
+                        >পরিবেশ সংরক্ষণ</span
+                      ></label
+                    >
+                    <label class="flex items-center p-3 chip rounded-lg"
+                      ><input
+                        type="checkbox"
+                        value="Health"
+                        class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
+                      /><span data-bn="স্বাস্থ্য সেবা" data-en="Health Services"
+                        >স্বাস্থ্য সেবা</span
+                      ></label
+                    >
+                    <label class="flex items-center p-3 chip rounded-lg"
+                      ><input
+                        type="checkbox"
+                        value="Transport"
+                        class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
+                      /><span data-bn="পরিবহন" data-en="Transport"
+                        >পরিবহন</span
+                      ></label
+                    >
+                    <label class="flex items-center p-3 chip rounded-lg"
+                      ><input
+                        type="checkbox"
+                        value="Volunteering"
+                        class="mr-3 rounded border-gray-300 text-[var(--brand-teal)] focus:ring-[var(--brand-teal)]"
+                      /><span
+                        data-bn="স্বেচ্ছাসেবক কার্যক্রম"
+                        data-en="Volunteering"
+                        >স্বেচ্ছাসেবক কার্যক্রম</span
+                      ></label
+                    >
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full py-4 rounded-xl font-bold text-lg text-white hover:opacity-95 transition-all"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--brand-blue),
+                      var(--brand-teal)
+                    );
+                  "
+                >
+                  <span
+                    data-bn="জমা দিন (WhatsApp খুলবে)"
+                    data-en="Submit (Opens WhatsApp)"
+                    >জমা দিন (WhatsApp খুলবে)</span
+                  >
+                </button>
+              </form>
+            </div>
+
+            <!-- Quick Contacts -->
+            <div class="space-y-4">
+              <a
+                href="https://wa.me/8801721271478"
+                target="_blank"
+                rel="noopener"
+                class="block card p-6 card-hover"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-xl grid place-items-center"
+                    style="
+                      background: linear-gradient(135deg, #22c55e, #16a34a);
+                    "
+                  >
+                    <svg
+                      class="w-7 h-7 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M20 3.5A10.5 10.5 0 0 0 3.1 17.6L2 22l4.5-1.2A10.4 10.4 0 0 0 12 21a10.5 10.5 0 0 0 8-17.5zM12 19.5a8.4 8.4 0 0 1-4.3-1.2l-.3-.2-2.6.7.7-2.5-.2-.3A8.5 8.5 0 1 1 12 19.5zm4.8-5.2c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a7.7 7.7 0 0 1-2.3-1.4 8.4 8.4 0 0 1-1.5-2.3c-.1-.3 0-.5.1-.7s.6-.7.8-1 .2-.4.1-.6-.5-1.4-.8-2-.6-.5-.8-.5h-.6c-.2 0-.6.1-.9.4a3 3 0 0 0-1 2.2 5.5 5.5 0 0 0 1.2 2.9 12.5 12.5 0 0 0 4.7 4 5 5 0 0 0 2.9.9 3 3 0 0 0 2.1-1c.3-.4.4-.8.5-1s0-.6-.2-.7z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900">WhatsApp</div>
+                    <div class="text-slate-600 text-sm mt-1">
+                      +8801721271478
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.facebook.com/taa.seen.ahmed.992836"
+                target="_blank"
+                rel="noopener"
+                class="block card p-6 card-hover"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-xl grid place-items-center"
+                    style="
+                      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+                    "
+                  >
+                    <svg
+                      class="w-7 h-7 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8ল-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900">Facebook</div>
+                    <div class="text-slate-600 text-sm mt-1">
+                      /taa.seen.ahmed.992836
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT (Redesigned) -->
+      <section id="contact" class="section-padding contact-gradient">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8">
+            <h2
+              class="text-3xl md:text-4xl font-extrabold"
+              style="color: var(--brand-blue)"
+            >
+              <span data-bn="যোগাযোগে থাকুন" data-en="Stay Connected"
+                >যোগাযোগে থাকুন</span
+              >
+            </h2>
+            <p class="mt-2 text-slate-600">
+              <span
+                data-bn="এক ক্লিকে সংযোগ • শেয়ার • কল"
+                data-en="One-tap connect • share • call"
+              >
+                এক ক্লিকে সংযোগ • শেয়ার • কল
+              </span>
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <!-- WhatsApp CTA -->
+            <a
+              href="https://wa.me/8801721271478"
+              target="_blank"
+              rel="noopener"
+              class="ripple glass p-5 rounded-2xl flex items-center gap-4 card-hover"
+            >
+              <div
+                class="w-12 h-12 rounded-xl grid place-items-center"
+                style="background: linear-gradient(135deg, #22c55e, #16a34a)"
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 3.5A10.5 10.5 0 0 0 3.1 17.6L2 22l4.5-1.2A10.4 10.4 0 0 0 12 21a10.5 10.5 0 0 0 8-17.5zM12 19.5a8.4 8.4 0 0 1-4.3-1.2l-.3-.2-2.6.7.7-2.5-.2-.3A8.5 8.5 0 1 1 12 19.5zm4.8-5.2c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a7.7 7.7 0 0 1-2.3-1.4 8.4 8.4 0 0 1-1.5-2.3c-.1-.3 0-.5.1-.7s.6-.7.8-1 .2-.4.1-.6-.5-1.4-.8-2-.6-.5-.8-.5h-.6c-.2 0-.6.1-.9.4a3 3 0 0 0-1 2.2 5.5 5.5 0 0 0 1.2 2.9 12.5 12.5 0 0 0 4.7 4 5 5 0 0 0 2.9.9 3 3 0 0 0 2.1-1c.3-.4.4-.8.5-1s0-.6-.2-.7z"
+                  />
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div
+                  class="font-bold text-slate-900"
+                  data-bn="WhatsApp-এ কথা বলুন"
+                  data-en="Chat on WhatsApp"
+                >
+                  WhatsApp-এ কথা বলুন
+                </div>
+                <div class="text-slate-600 text-sm truncate">
+                  +8801721271478
+                </div>
+              </div>
+            </a>
+
+            <!-- Facebook CTA -->
+            <a
+              href="https://www.facebook.com/taa.seen.ahmed.992836"
+              target="_blank"
+              rel="noopener"
+              class="ripple glass p-5 rounded-2xl flex items-center gap-4 card-hover"
+            >
+              <div
+                class="w-12 h-12 rounded-xl grid place-items-center"
+                style="background: linear-gradient(135deg, #3b82f6, #1d4ed8)"
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.6V12h2.6V9.8c0-2.6 1.6-4 3.9-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                  />
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div
+                  class="font-bold text-slate-900"
+                  data-bn="Facebook-এ মেসেজ করুন"
+                  data-en="Message on Facebook"
+                >
+                  Facebook-এ মেসেজ করুন
+                </div>
+                <div class="text-slate-600 text-sm truncate">
+                  /taa.seen.ahmed.992836
+                </div>
+              </div>
+            </a>
+
+            <!-- Call Now -->
+            <button
+              id="callNow"
+              class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
+            >
+              <div
+                class="w-12 h-12 rounded-xl grid place-items-center"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-indigo),
+                    var(--brand-teal)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.62 10.79a15 15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11 11 0 0 0 3.45.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.45 1 1 0 0 1-.24 1.05z"
+                  />
+                </svg>
+              </div>
+              <div class="text-left">
+                <div
+                  class="font-bold text-slate-900"
+                  data-bn="এখনই কল করুন"
+                  data-en="Call Now"
+                >
+                  এখনই কল করুন
+                </div>
+                <div class="text-slate-600 text-sm">+8801721271478</div>
+              </div>
+            </button>
+
+            <!-- Share Card -->
+            <button
+              id="shareBtn"
+              class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
+            >
+              <div
+                class="w-12 h-12 rounded-xl grid place-items-center"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand-lime),
+                    var(--brand-pink)
+                  );
+                "
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.27 3.27 0 0 0 0-1.39l7.02-4.11A2.99 2.99 0 1 0 14 5a2.9 2.9 0 0 0 .04.49L7.02 9.6a3 3 0 1 0 0 4.8l7 4.11c-.03.16-.05.32-.05.49a3 3 0 1 0 3-2.92z"
+                  />
+                </svg>
+              </div>
+              <div class="text-left">
+                <div
+                  class="font-bold text-slate-900"
+                  data-bn="এই ক্যাম্পেইন শেয়ার করুন"
+                  data-en="Share this campaign"
+                >
+                  এই ক্যাম্পেইন শেয়ার করুন
+                </div>
+                <div
+                  class="text-slate-600 text-sm"
+                  data-bn="বন্ধুদের জানাতে শেয়ার বাটনে ট্যাপ করুন"
+                  data-en="Tap to share with friends"
+                >
+                  বন্ধুদের জানাতে শেয়ার বাটনে ট্যাপ করুন
+                </div>
+              </div>
+            </button>
+
+            <!-- Copy Number -->
+            <button
+              id="copyBtn"
+              class="ripple glass p-5 rounded-2xl flex items-center gap-4 w-full card-hover"
+            >
+              <div
+                class="w-12 h-12 rounded-xl grid place-items-center"
+                style="background: linear-gradient(135deg, #0ea5e9, #2563eb)"
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+                  />
+                </svg>
+              </div>
+              <div class="text-left">
+                <div
+                  class="font-bold text-slate-900"
+                  data-bn="নম্বর কপি করুন"
+                  data-en="Copy Number"
+                >
+                  নম্বর কপি করুন
+                </div>
+                <div class="text-slate-600 text-sm">+8801721271478</div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <div>
+          <span
+            data-bn="&copy; ২০২৫ ত্বা-সীন আহমেদ"
+            data-en="&copy; 2025 Taa-Seen Ahmed"
+            >&copy; ২০২৫ ত্বা-সীন আহমেদ</span
+          >
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <span
+            >Developed & Designed by
+            <a
+              href="https://about.me/shahriar"
+              target="_blank"
+              rel="noopener"
+              class="font-semibold"
+              style="color: var(--brand-teal)"
+              >Mahir Shahriar</a
+            ></span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">Copied!</div>
+
+    <script>
+      // Mobile menu
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileBtn?.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden")
+      );
+
+      // Language toggle
+      const langToggle = document.getElementById("lang-toggle");
+      function setLang(to) {
+        document.body.setAttribute("data-lang", to);
+        document.querySelectorAll("[data-bn],[data-en]").forEach((el) => {
+          const txt = el.getAttribute(to === "bn" ? "data-bn" : "data-en");
+          if (txt !== null) {
+            el.innerText = txt;
+          }
+        });
+      }
+      langToggle?.addEventListener("click", () => {
+        const current = document.body.getAttribute("data-lang") || "bn";
+        setLang(current === "bn" ? "en" : "bn");
+        langToggle.querySelector("span")?.setAttribute("data-bn", "EN");
+        langToggle.querySelector("span")?.setAttribute("data-en", "BN");
+        langToggle.querySelector("span").innerText =
+          current === "bn" ? "BN" : "EN";
+      });
+
+      // Slider
+      (function () {
+        const slides = Array.from(document.querySelectorAll(".slide"));
+        const dots = Array.from(document.querySelectorAll(".dot"));
+        let i = 0;
+        function go(n) {
+          slides[i].classList.remove("active");
+          dots[i].classList.remove("active");
+          i = (n + slides.length) % slides.length;
+          slides[i].classList.add("active");
+          dots[i].classList.add("active");
+        }
+        document
+          .getElementById("prevSlide")
+          ?.addEventListener("click", () => go(i - 1));
+        document
+          .getElementById("nextSlide")
+          ?.addEventListener("click", () => go(i + 1));
+        dots.forEach((d, idx) => d.addEventListener("click", () => go(idx)));
+        let auto = setInterval(() => go(i + 1), 5000);
+        ["prevSlide", "nextSlide"].forEach((id) => {
+          document.getElementById(id)?.addEventListener("click", () => {
+            clearInterval(auto);
+          });
+        });
+      })();
+
+      // WhatsApp form submit
+      document
+        .getElementById("volunteer-form")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("f-name").value.trim();
+          const email = document.getElementById("f-email").value.trim();
+          const phone = document.getElementById("f-phone").value.trim();
+          const dept = document.getElementById("f-dept").value;
+          const interests = Array.from(
+            document.querySelectorAll(
+              '#volunteer-form input[type="checkbox"]:checked'
+            )
+          ).map((i) => i.value);
+
+          const msg =
+            `Volunteer Request — Taa-Seen Ahmed%0A` +
+            `Name: ${encodeURIComponent(name)}%0A` +
+            `Email: ${encodeURIComponent(email)}%0A` +
+            `Phone: ${encodeURIComponent(phone)}%0A` +
+            `Department: ${encodeURIComponent(dept)}%0A` +
+            `Interests: ${encodeURIComponent(interests.join(", "))}`;
+
+          const wa = `https://wa.me/8801721271478?text=${msg}`;
+          window.open(wa, "_blank");
+        });
+
+      // Ripple effect
+      function addRipple(el) {
+        el.addEventListener("click", (e) => {
+          const rect = el.getBoundingClientRect();
+          el.style.setProperty("--x", e.clientX - rect.left + "px");
+          el.style.setProperty("--y", e.clientY - rect.top + "px");
+          el.classList.add("active");
+          setTimeout(() => el.classList.remove("active"), 450);
+        });
+      }
+      document.querySelectorAll(".ripple").forEach(addRipple);
+
+      // Call now
+      document.getElementById("callNow")?.addEventListener("click", () => {
+        window.location.href = "tel:+8801721271478";
+      });
+
+      // Share
+      document
+        .getElementById("shareBtn")
+        ?.addEventListener("click", async () => {
+          const shareData = {
+            title: "Ballot 15 — Taa-Seen Ahmed",
+            text: "Young, energetic, student-first. Support Ballot 15!",
+            url: window.location.href,
+          };
+          if (navigator.share) {
+            try {
+              await navigator.share(shareData);
+            } catch (e) {}
+          } else {
+            await navigator.clipboard.writeText(window.location.href);
+            showToast("Link copied!");
+          }
+        });
+
+      // Copy number
+      const phoneText = "+8801721271478";
+      document
+        .getElementById("copyBtn")
+        ?.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(phoneText);
+            showToast("Number copied!");
+          } catch (e) {
+            showToast("Copy failed");
+          }
+        });
+
+      // Toast helper
+      const toast = document.getElementById("toast");
+      function showToast(text) {
+        toast.textContent = text;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1600);
+      }
+
+      // Initial language (BN default)
+      setLang("bn");
+    </script>
+  </body>
+</html>
